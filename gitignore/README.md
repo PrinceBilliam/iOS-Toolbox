@@ -16,13 +16,13 @@ Okay, you did the above and it's not working
 * You most likely have already committed whatever files you are trying to ignore
 * If so, go to the root of your repository and run this
 ```
-find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
+find . -name .DS_Store -print0 | xargs -0 git rm -rf --ignore-unmatch
 ```
 * This removes all `.DS_Store` files in that repository
 * Replace `.DS_Store` with the file type you want to remove
 * For instance:
 ```
-find . -name .xcuserstate -print0 | xargs -0 git rm --ignore-unmatch
+find . -name .xcuserstate -print0 | xargs -0 git rm -rf --ignore-unmatch
 ```
 * Make sure to commit after
 * Boom, git is no longer tracking `.DS_Store`
